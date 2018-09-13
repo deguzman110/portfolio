@@ -1,0 +1,233 @@
+/********** Generic Project Styles **********/
+header { height: 100%; }
+h1 { margin: 1rem auto; text-align: center; }
+header h3 { margin: 0 auto; max-width: 50%; padding: 0; text-align: center; }
+
+header .btn {
+  display: flex;
+  margin: 2rem auto;
+}
+
+#project-header-container {
+  padding: 10vh 0;
+}
+
+/* typography */
+h3, h4, h5, li, p { color: #fff; }
+h3 { padding-bottom: 1rem; }
+#project-process > div h3, #conclusion-header { font-size: 2.5rem; font-weight: 700; padding-bottom: 2rem; }
+h4 { padding-bottom: 1.25rem; }
+h5 { font-size: 1.10rem; font-weight: 600; letter-spacing: 1.5px; }
+h5, p, li { line-height: 2rem; }
+li { font-weight: 600; margin: 1rem auto; }
+#overview h3, #overview h4, #overview li, #overview p, #conclusion h3, #conclusion h5, #conclusion li, #conclusion p { color: #000; }
+
+.bold { font-weight: 700; }
+.emphasized { font-style: italic; font-weight: 700; }
+.bold-underlined { text-decoration: underline; font-weight: 700; }
+.percentage { color: #43A6DE; font-size: 3rem; font-weight: 700; padding: 2rem 0 0; }
+
+/* project image */
+#project-image {
+  text-align: center;
+}
+
+#project-image img {
+  max-height: 100vh;
+  max-width: 90vw;
+}
+
+/* tablet header */
+@media screen and (max-width: 900px) {
+  #project-header-container {
+    padding: 5vh 0;
+  }
+
+  h1 { font-size: 2.5rem; line-height: 2rem; }
+  header h3 { font-size: 1.25rem; max-width: 70%; }
+}
+
+/* mobile header */
+@media screen and (max-width: 600px) {
+  #project-header-container {
+    padding: 2.5vh 0;
+  }
+
+  header h3 { max-width: 90%; }
+}
+
+/*** overview ***/
+#overview {
+  background: #fff;
+  display: grid;
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  "roles roles deliverables deliverables tools tools"
+  "problem problem problem solution solution solution";
+}
+
+#roles { grid-area: roles; }
+#deliverables { grid-area: deliverables; }
+#tools { grid-area: tools; }
+#problem { grid-area: problem; }
+#solution { grid-area: solution; }
+
+#overview > div {
+  background: #f0f0f0;
+  padding: 5vh 0;
+}
+
+/* roles, deliverables, tools */
+#roles, #deliverables, #tools { text-align: center; }
+#roles h3, #deliverables h3, #tools h3 { margin: 1rem auto; padding-bottom: 0; }
+#roles li, #deliverables li, #tools li { font-weight: 400; line-height: 1.25rem; }
+
+/* problem & solution */
+#problem h3, #solution h3 { margin: 1rem auto; max-width: 80%; padding-bottom: 0; }
+#problem h5, #solution h5 { color: #999; font-size: 1rem; margin: 1rem auto; max-width: 80%; }
+#problem p, #solution p { line-height: 2.5rem; margin: 1rem auto; max-width: 80%; }
+
+/* high-res overview */
+@media screen and (min-width: 1440px) {
+  #overview {
+    margin: 1rem auto;
+    width: 1440px;
+  }
+}
+
+/* tablet overview */
+@media screen and (max-width: 900px) {
+  #overview {
+    grid-auto-rows: minmax(20px, auto);
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "roles"
+    "deliverables"
+    "tools"
+    "problem"
+    "solution";
+    margin: 1rem auto;
+  }
+
+  #problem h3, #problem h5, #problem p, #solution h3, #solution h5, #solution p { max-width: 70%; }
+}
+
+/* mobile overview */
+@media screen and (max-width: 600px) {
+  #problem h3, #problem h5, #problem p, #solution h3, #solution h5, #solution p { max-width: 90%; }
+}
+
+/* projects - general styling */
+
+.content {
+  margin: 0 auto;
+  padding: 10vh 20vw;
+  width: 100%;
+}
+
+#information-architecture > #user-flow-images {
+  margin: 0 auto;
+  padding: 10vh;
+  width: 100%;
+}
+
+.body-text, #project-process > div h5, #project-process > div p, #project-process > div ul, #pref-test h4, #pref-test p {
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* tablet text styling */
+@media screen and (max-width: 900px) {
+  .body-text, #project-process > div h5, #project-process > div p, #project-process > div ul {
+    width: 100%;
+  }
+}
+
+#branding {
+  padding-top: 10vh;
+}
+
+.btn {
+  margin: 2rem auto;
+}
+
+/* mobile spacing (wider - 90% of width) */
+@media screen and (max-width: 600px) {
+  .content {
+    padding: 10vh 5vw;
+  }
+
+  section > div > .btn {
+    max-width: 100%;
+  }
+}
+
+/*** conclusion section ***/
+#conclusion > div ul li {
+  list-style-type: square;
+  margin: 1.5rem;
+  text-indent: 0;
+}
+
+/*** projects carousel section ***/
+#projects-carousel {
+  background: linear-gradient(#43A6DE, #1D6891);
+  height: 100%;
+  padding: 2rem 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+#project-slides-container a {
+  margin: 0;
+  padding: 0;
+}
+
+#project-slides-container img {
+  margin: 0 auto;
+}
+
+#project-slides-container p {
+  font-size: 1rem;
+}
+
+/* mobile carousel */
+@media screen and (max-width: 600px) {
+  #project-slides-container img {
+    width: 90%;
+  }
+}
+
+/* carousel slider styling */
+.slick-slider { position: relative; display: block; box-sizing: border-box; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-touch-callout: none; -khtml-user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
+
+.slick-list { position: relative; display: block; overflow: hidden; margin: 0; padding: 0; }
+
+.slick-list:focus
+{ outline: none; }
+
+.slick-list.dragging
+{ cursor: pointer; cursor: hand; }
+
+.slick-slider .slick-track, .slick-slider .slick-list { -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+
+.slick-track { position: relative; top: 0; left: 0; display: block; margin-left: auto; margin-right: auto; }
+.slick-track:before, .slick-track:after { display: table; content: ''; }
+.slick-track:after { clear: both; }
+.slick-loading .slick-track { visibility: hidden; }
+.slick-slide { display: none; float: left; height: 100%; min-height: 1px; }
+[dir='rtl'] .slick-slide { float: right; }
+.slick-slide img { display: block; }
+.slick-slide.slick-loading img { display: none; }
+.slick-slide.dragging img { pointer-events: none; }
+.slick-initialized .slick-slide { display: block; }
+.slick-loading .slick-slide { visibility: hidden; }
+.slick-vertical .slick-slide { display: block; height: auto; border: 1px solid transparent; }
+.slick-arrow.slick-hidden { display: none; }
+
+button.slick-next.slick-arrow { background-color: rgba(17,17,17,0.5); color: #fff; position: absolute; right: 0; top: 25%; width: 50px; z-index: 9999; }
+
+button.slick-prev.slick-arrow { background-color: rgba(17,17,17,0.5); color: #fff; position: absolute; left: 0; top: 25%; width: 50px; z-index: 9999; }

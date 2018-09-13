@@ -1,0 +1,130 @@
+/*** unique project styles for bloc-jams ***/
+/* header */
+header {
+  background: url(../images/bloc-jams/bloc-jams-hero-background.jpg) no-repeat center / cover;
+}
+
+/* section background colors */
+#project-process {
+  background: linear-gradient(#9E588A, #333333);
+}
+
+#front-end-development {
+  background: linear-gradient(rgba(51,51,51,1), rgba(51,51,51,0.75));
+}
+
+/* div sizing */
+#front-end-development > div {
+  margin: 0 auto;
+  padding: 0 15vw 10vh;
+  width: 70%;
+}
+
+/* tablet div sizing */
+@media screen and (max-width: 900px) {
+  #front-end-development > div {
+    width: 90%;
+  }
+}
+
+/* mobile div sizing */
+@media screen and (max-width: 600px) {
+  #front-end-development > div {
+    padding: 0 5vw 10vh;
+  }
+}
+
+/* typography */
+#user-stories h4, #coding-the-website h4 {
+  font-weight: 400;
+}
+
+/*** user stories ***/
+#project-process > div p, .project-process > div ul {
+  width: 100%;
+}
+
+#user-story-1, #user-story-2, #user-story-3 {
+  background: #222;
+  padding: 1rem;
+}
+
+#user-stories {
+  display: grid;
+  grid-auto-rows: minmax(20px, auto);
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  "user-stories-header ."
+  "user-stories-body bloc-jams-logo"
+  "us-1 us-3"
+  "us-2 us-3";
+}
+
+#project-process > div ul {
+  width: 90%;
+}
+
+#user-stories ul li {
+  list-style-type: square;
+}
+
+#user-stories-header { grid-area: user-stories-header; }
+#bloc-jams-logo { grid-area: bloc-jams-logo; margin: 0 auto 1rem auto; }
+#user-stories-body { grid-area: user-stories-body; width: 95%; }
+#user-story-1 { grid-area: us-1; }
+#user-story-2 { grid-area: us-2; }
+#user-story-3 { grid-area: us-3; }
+
+/* tablet & mobile user stories */
+@media screen and (max-width: 900px) {
+  #user-stories {
+    display: grid;
+    grid-auto-rows: minmax(20px, auto);
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "user-stories-header"
+    "bloc-jams-logo"
+    "user-stories-body"
+    "us-1"
+    "us-2"
+    "us-3";
+  }
+}
+
+/*** conclusion section ***/
+#conclusion {
+  display: grid;
+  grid-auto-rows: min-max(0px, auto);
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  "conclusion-header ."
+  "logo conclusion-body"
+  "key-takeaways conclusion-body";
+}
+
+#conclusion-logo { grid-area: logo; margin: auto; }
+#key-takeaways { grid-area: key-takeaways; }
+#conclusion-header { grid-area: conclusion-header; }
+#conclusion-body { grid-area: conclusion-body; }
+
+/* tablet conclusion */
+@media screen and (max-width: 900px) {
+  #conclusion {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "conclusion-header"
+    "logo"
+    "key-takeaways"
+    "conclusion-body";
+  }
+}
+
+/* mobile conclusion */
+@media screen and (max-width: 600px) {
+  #conclusion > div img {
+    max-width: 100%;
+  }
+}
